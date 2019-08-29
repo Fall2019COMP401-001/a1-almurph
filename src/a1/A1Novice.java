@@ -30,7 +30,7 @@ public class A1Novice {
 				totalCost += totalItems * price; // 
 				
 			}
-		System.out.println(firstName + "." + lastName + ": " + String.format("%.2f", totalCost));
+		System.out.println(firstName + ". " + lastName + ": " + String.format("%.2f", totalCost));
 		
 	}
 	
