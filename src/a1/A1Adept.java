@@ -25,6 +25,9 @@ public class A1Adept {
 		
 		String[] customers = new String[numCustomers]; 
 		Double[] amountSpent = new Double[numCustomers]; 
+		Double sumForAverage = 0.0; 
+		int biggestAmount = 0; 
+		int smallestAmount = 0; 
 		
 		// double cost = 0.0; 
 		
@@ -78,7 +81,15 @@ public class A1Adept {
 			}
 			
 			amountSpent[i] = cost; 
-				
+			
+			sumForAverage += cost; 
+			
+			if (cost > amountSpent[biggestAmount]) {
+				biggestAmount = i;
+			} else if (cost < amountSpent[smallestAmount]) {
+				smallestAmount = i;
+			}
+			
 			}
 			
 		}
