@@ -19,15 +19,16 @@ public class A1Adept {
 			storePrices[i] = scan.nextDouble(); // for loop that cycles through the items in the store
 		}
 		
+		int spendsMost = 0; 
+		int spendsLeast = 0; 
+		
 		int numCustomers = scan.nextInt(); // counts the number of customers
-		// String[] firstName = new String[numCustomers]; 
-		// String[] lastName = new String[numCustomers]; 
+		// String[] firstName = new String[numCustomers]; // sets up customer first name
+		// String[] lastName = new String[numCustomers]; // sets up customer last name
 		
 		String[] customers = new String[numCustomers]; 
 		Double[] amountSpent = new Double[numCustomers]; 
 		Double sumForAverage = 0.0; 
-		int biggestAmount = 0; 
-		int smallestAmount = 0; 
 		
 		// double cost = 0.0; 
 		
@@ -84,14 +85,22 @@ public class A1Adept {
 			
 			sumForAverage += cost; 
 			
-			if (cost > amountSpent[biggestAmount]) {
-				biggestAmount = i;
-			} else if (cost < amountSpent[smallestAmount]) {
-				smallestAmount = i;
+			if (cost > amountSpent[spendsMost]) {
+				spendsMost = i;
+			} else if (cost < amountSpent[spendsLeast]) {
+				spendsLeast = i;
 			}
 			
 			}
+		
+		System.out.println("Biggest: " + customers[spendsMost] + " " + "(" + String.format("%.02f", amountSpent[spendsMost]) + ")"); 
 			
+		System.out.println("Smallest: " + customers[spendsLeast] + " " + "(" + String.format("%.02f", amountSpent[spendsLeast]) + ")"); 
+		
+		System.out.println("Averaget: " + String.format("%.02f", sumForAverage/numCustomers)); 
+		
+		scan.close(); 
+		
 		}
 		
 		
