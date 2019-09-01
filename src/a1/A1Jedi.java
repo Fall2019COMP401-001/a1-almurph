@@ -53,4 +53,15 @@ public class A1Jedi {
 			}
 			
 		}
+		for (int l = 0; l < numItems; l++) {
+			if (peopleQuantity[l] == 0) {
+				System.out.println("No customers bought " + storeItems[l]);
+				
+			} else {
+				System.out.println(peopleQuantity[l] + " customers bought " + itemQuantity[l] + " " + storeItems[l]); 
+				
+			}
+		}
+		scan.close(); 
+		
 }
