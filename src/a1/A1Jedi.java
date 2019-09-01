@@ -17,7 +17,7 @@ public class A1Jedi {
 	
 		for (int i = 0; i<numItems; i++) {
 			storeItems[i] = scan.next(); 
-			storePrices[i] = scan.nextDouble();	
+			storePrices[i] = scan.nextDouble();	 // same as adept
 		
 		}
 		
@@ -33,20 +33,20 @@ public class A1Jedi {
 			firstName[i] = scan.next(); 
 			lastName[i] = scan.next(); //creates first and last name
 
-			int numBought = scan.nextInt();
+			int numBought = scan.nextInt(); // same as adept
 			
-			boolean[] wasItBought = new boolean[numItems];
+			boolean[] wasItBought = new boolean[numItems]; // establishes if the item was bought
 			for (int j = 0; j < numBought; j++) {
 				int quantity = scan.nextInt(); 
 				String nameOfItem = scan.next(); 
 				
 				for (int k = 0; k < numItems; k++) {
 					if (storeItems[k].equals(nameOfItem)) {
-						itemQuantity[k] += quantity; 
+						itemQuantity[k] += quantity; // adds how many times an item was bought
 						
 						if (!wasItBought[k]) {
 							wasItBought[k] = true; 
-							peopleQuantity[k]++; 
+							peopleQuantity[k]++; // adds the amount of people that bought that item
 						}
 					}
 				}
@@ -54,14 +54,20 @@ public class A1Jedi {
 			
 		}
 		for (int l = 0; l < numItems; l++) {
-			if (peopleQuantity[l] == 0) {
-				System.out.println("No customers bought " + storeItems[l]);
+			if (peopleQuantity[l] == 0) { // distinguishes if an item wasn't bought
+				System.out.println("No customers bought " + storeItems[l]); 
 				
 			} else {
 				System.out.println(peopleQuantity[l] + " customers bought " + itemQuantity[l] + " " + storeItems[l]); 
 				
 			}
 		}
-		scan.close(); 
+		scan.close();
 		
+	}
 }
+
+	
+
+
+		
