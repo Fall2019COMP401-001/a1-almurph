@@ -40,8 +40,8 @@ public class A1Adept {
 
 			int numBought = scan.nextInt(); 
 			double cost = 0.0; 			
-			for (int j = 0; j < numBought; i++) {
-				//System.out.println(amountSpent[j]);
+			for (int j = 0; j < numBought; j++) {
+				// System.out.println(firstName[j]);
 
 				int quantityOfItems = scan.nextInt(); 
 				String itemDescription = scan.next(); 
