@@ -95,11 +95,11 @@ public class A1Adept {
 			
 			}
 		
-		System.out.println("Biggest: " + firstName[spendsMost] + " " + lastName[spendsMost] + " " + "(" + String.format("%.02f", amountSpent[spendsMost]) + ")"); 
+		System.out.println("Biggest: " + firstName[spendsMost] + " " + lastName[spendsMost] + " " + "(" + String.format("%.02f", amountSpent[spendsMost]) + ") "); 
 			
-		System.out.println("Smallest: " + firstName[spendsLeast] + " " + lastName[spendsLeast] + " " + "(" + String.format("%.02f", amountSpent[spendsLeast]) + ")"); 
+		System.out.println("Smallest: " + firstName[spendsLeast] + " " + lastName[spendsLeast] + " " + "(" + String.format("%.02f", amountSpent[spendsLeast]) + ") "); 
 		
-		System.out.println("Averaget: " + String.format("%.02f", sumForAverage/numCustomers)); 
+		System.out.println("Averaget: " + String.format("%.02f ", sumForAverage/numCustomers)); 
 		
 		scan.close(); 
 		
